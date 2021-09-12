@@ -4,6 +4,8 @@ async function getData() {
 		const data = await res.json();
 		var img = document.getElementById('res');
 		img.src = data.message;
+		img.style.width = '500px';
+		img.style.height = '500px';
 		console.log(data.message);
 	} catch {
 		console.log('error');
@@ -11,5 +13,3 @@ async function getData() {
 
 	// return data;
 }
-
-getData();
